@@ -471,6 +471,34 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#_story">Story</a>
+<ul class="sectlevel2">
+<li><a href="#_이야기_등록">이야기 등록</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_등록_http_request">HTTP request</a></li>
+<li><a href="#_이야기_등록_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_이야기_목록형_조회">이야기 목록형 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_목록형_조회_http_request">HTTP request</a></li>
+<li><a href="#_이야기_목록형_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_이야기_앨범형_조회">이야기 앨범형 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_앨범형_조회_http_request">HTTP request</a></li>
+<li><a href="#_이야기_앨범형_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_이야기_상세_조회">이야기 상세 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_상세_조회_http_request">HTTP request</a></li>
+<li><a href="#_이야기_상세_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -555,11 +583,11 @@ Content-Length: 35
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-Content-Length: 35
+Content-Length: 36
 Host: localhost:8080
 
 {
-  "invite_code" : "oworiinvite"
+  "invite_code" : "우리가족"
 }</code></pre>
 </div>
 </div>
@@ -575,10 +603,191 @@ Host: localhost:8080
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_story"><a class="link" href="#_story">Story</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_이야기_등록"><a class="link" href="#_이야기_등록">이야기 등록</a></h3>
+<div class="sect3">
+<h4 id="_이야기_등록_http_request"><a class="link" href="#_이야기_등록_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /stories HTTP/1.1
+Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Accept: application/json
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+Content-Length: 540
+Host: localhost:8080
+
+{
+  "start_date" : "2017-12-25",
+  "end_date" : "2017-12-30",
+  "title" : "기다리고 기다리던 하루",
+  "contents" : "종강하면 동해바다로 가족 여행 가자고 한게 엊그제 같았는데...3박 4일 동해여행 너무 재밌었어!! 날씨도 너무 좋았고 특히 갈치조림이 대박 ㄹㅇ 맛집 인정... 2일차 점심 때 대림공원 안에서 피크닉한게 가장 기억에 남았던거 같아! 엄마가 만들어 준 샌드위치는 세상에서 젤 맛있어 이거 팔면 대박날듯 ㅋㅋㅋ "
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_등록_http_response"><a class="link" href="#_이야기_등록_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+Content-Length: 14
+
+{
+  "id" : 2
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_목록형_조회"><a class="link" href="#_이야기_목록형_조회">이야기 목록형 조회</a></h3>
+<div class="sect3">
+<h4 id="_이야기_목록형_조회_http_request"><a class="link" href="#_이야기_목록형_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/list?sort=createAt&amp;lastId=2 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_목록형_조회_http_response"><a class="link" href="#_이야기_목록형_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 648
+
+[ {
+  "title" : "신나는 가족여행",
+  "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+  "image" : "image.png",
+  "heart_cnt" : 5,
+  "comment_cnt" : 2,
+  "writer" : "허망고",
+  "date" : "2022-02-01"
+}, {
+  "title" : "다같이 보드게임 했던 날",
+  "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+  "image" : "image.png",
+  "heart_cnt" : 2,
+  "comment_cnt" : 5,
+  "writer" : "허지롱이",
+  "date" : "2022-02-01 - 2022-02-04"
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_앨범형_조회"><a class="link" href="#_이야기_앨범형_조회">이야기 앨범형 조회</a></h3>
+<div class="sect3">
+<h4 id="_이야기_앨범형_조회_http_request"><a class="link" href="#_이야기_앨범형_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/album?sort=createAt&amp;lastId=4 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_앨범형_조회_http_response"><a class="link" href="#_이야기_앨범형_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 426
+
+[ {
+  "year_month" : "2023.07",
+  "images" : [ "image0.png", "image00.png", "image02.png" ]
+}, {
+  "year_month" : "2023.06",
+  "images" : [ "image2.png", "image3.png", "image2.png", "image3.png", "image3.png" ]
+}, {
+  "year_month" : "2023.05",
+  "images" : [ "image0.png", "image00.png", "image02.png" ]
+}, {
+  "year_month" : "2023.04",
+  "images" : [ "image2.png", "image3.png", "image2.png", "image3.png", "image3.png" ]
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_상세_조회"><a class="link" href="#_이야기_상세_조회">이야기 상세 조회</a></h3>
+<div class="sect3">
+<h4 id="_이야기_상세_조회_http_request"><a class="link" href="#_이야기_상세_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/2 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_상세_조회_http_response"><a class="link" href="#_이야기_상세_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 1263
+
+{
+  "is_liked" : true,
+  "images" : [ "image2.png", "image3.png", "image2.png", "image3.png", "image3.png" ],
+  "title" : "~ 다같이 야구 보고온 날 ~",
+  "writer" : "김건빵",
+  "contents" : "오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 오늘은 엘지가 이겼다. 얏호",
+  "comments" : [ {
+    "parent_comment_id" : null,
+    "comment_id" : 1,
+    "comment" : "야호 첫번째 최상위 댓글입니다.",
+    "writer" : "허지렁지렁",
+    "time_before_writing" : "3시간 전"
+  }, {
+    "parent_comment_id" : 1,
+    "comment_id" : 2,
+    "comment" : "첫번째 대댓글입니다.",
+    "writer" : "김건빵",
+    "time_before_writing" : "2시간 전"
+  }, {
+    "parent_comment_id" : 1,
+    "comment_id" : 3,
+    "comment" : "두번째 대댓글입니다.",
+    "writer" : "고구마",
+    "time_before_writing" : "30분 전"
+  }, {
+    "parent_comment_id" : null,
+    "comment_id" : 4,
+    "comment" : "야호 두번째 최상위댓글입니다.",
+    "writer" : "아몬드",
+    "time_before_writing" : "2시간 전"
+  } ],
+  "heart_cnt" : 5,
+  "comment_cnt" : 4
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-05 16:44:25 +0900
+Last updated 2023-07-05 20:10:28 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
