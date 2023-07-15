@@ -501,6 +501,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_이야기_등록_http_response">HTTP response</a></li>
 </ul>
 </li>
+<li><a href="#_이야기_수정">이야기 수정</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_수정_http_request">HTTP request</a></li>
+<li><a href="#_이야기_수정_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_이야기_삭제">이야기 삭제</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_삭제_http_request">HTTP request</a></li>
+<li><a href="#_이야기_삭제_http_response">HTTP response</a></li>
+</ul>
+</li>
 <li><a href="#_이야기_전체_조회_최신순">이야기 전체 조회 (최신순)</a>
 <ul class="sectlevel3">
 <li><a href="#_이야기_전체_조회_최신순_http_request">HTTP request</a></li>
@@ -519,6 +531,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_이야기_상세_조회_http_response">HTTP response</a></li>
 </ul>
 </li>
+<li><a href="#_이야기_검색">이야기 검색</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_검색_http_request">HTTP request</a></li>
+<li><a href="#_이야기_검색_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_유저가_작성한_이야기_조회">유저가 작성한 이야기 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_유저가_작성한_이야기_조회_http_request">HTTP request</a></li>
+<li><a href="#_유저가_작성한_이야기_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_유저가_좋아한_이야기_조회">유저가 좋아한 이야기 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_유저가_좋아한_이야기_조회_http_request">HTTP request</a></li>
+<li><a href="#_유저가_좋아한_이야기_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_schedule">Schedule</a>
@@ -533,6 +563,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_일정_수정_http_request">HTTP request</a></li>
 <li><a href="#_일정_수정_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_일정_삭제">일정 삭제</a>
+<ul class="sectlevel3">
+<li><a href="#_일정_삭제_http_request">HTTP request</a></li>
+<li><a href="#_일정_삭제_http_response">HTTP response</a></li>
 </ul>
 </li>
 <li><a href="#_일정_월별_조회">일정 월별 조회</a>
@@ -670,7 +706,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 141
+Content-Length: 138
 
 {
   "access_token" : "asdfiuer3oidwf12.asdfoihoihn23vs.grwoi6ghrweiog5h",
@@ -694,8 +730,8 @@ Content-Length: 141
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 2fae2fe7-d2f1-4f99-bc99-25bfdec1f64f
-Content-Length: 44
+memberId: a9c034f6-602f-4508-aa0d-0a7b452c51f1
+Content-Length: 42
 Host: localhost:8080
 
 {
@@ -710,7 +746,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 37
+Content-Length: 35
 
 {
   "invite_code" : "oworiinvite"
@@ -728,8 +764,8 @@ Content-Length: 37
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 3337eed4-acda-4703-911c-bb77d03ff51d
-Content-Length: 50
+memberId: eeef7574-8098-4834-b592-fc994b55fde2
+Content-Length: 48
 Host: localhost:8080
 
 {
@@ -756,8 +792,8 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/group-name HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: d042a182-ae56-4f9a-86a5-050038978acd
-Content-Length: 44
+memberId: b2d96c8e-8018-437e-99bb-bd3af3a915c9
+Content-Length: 42
 Host: localhost:8080
 
 {
@@ -784,7 +820,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/images HTTP/1.1
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 0578321c-7f53-430b-8d8f-3df1fc2821e2
+memberId: c521ea65-07ca-4719-9cb8-12ec259ffb56
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -802,7 +838,7 @@ Image
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 36
+Content-Length: 34
 
 {
   "url" : "http://someUrlToS3"
@@ -826,7 +862,7 @@ Content-Length: 36
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Accept: application/json
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 667a8be5-78ea-410f-a2df-d58c358435bf
+memberId: 80414d58-b633-4bb1-b13c-98c2c982d6fe
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -851,7 +887,7 @@ Image 2
 Content-Type: application/json;charset=UTF-8
 Content-Length: 162
 
-[ "6160a597-98a0-4e3f-bd0f-d3b1b5f67e11", "d0fc671e-55c7-4736-8534-0a00bde8dacf", "e9bf5190-6412-481c-bdb6-80c01ae2a2e8", "ec98a2fb-0a9b-4c89-8930-4db51ebdc460" ]</code></pre>
+[ "7106b8fc-03d0-45a8-864c-7f79a0b8ee03", "53bdf397-5783-4546-a81a-38fe2a02062f", "8ff5bfa7-83b1-4eaf-a947-199e29a0d046", "9c2d2ad6-2d3b-4817-a5fc-0d99a478ea5c" ]</code></pre>
 </div>
 </div>
 </div>
@@ -870,8 +906,8 @@ Content-Length: 162
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /stories HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: aadb3ac0-33f9-4bd0-bb80-b2daf13fb7b9
-Content-Length: 806
+memberId: acb64421-afbe-4365-89b3-c211d8e912b9
+Content-Length: 800
 Host: localhost:8080
 
 {
@@ -879,7 +915,7 @@ Host: localhost:8080
   "end_date" : "2017-12-30",
   "title" : "기다리고 기다리던 하루",
   "contents" : "종강하면 동해바다로 가족 여행 가자고 한게 엊그제 같았는데...3박 4일 동해여행 너무 재밌었어!! 날씨도 너무 좋았고 특히 갈치조림이 대박 ㄹㅇ 맛집 인정... 2일차 점심 때 대림공원 안에서 피크닉한게 가장 기억에 남았던거 같아! 엄마가 만들어 준 샌드위치는 세상에서 젤 맛있어 이거 팔면 대박날듯 ㅋㅋㅋ ",
-  "images_id" : [ "25565629-4fd0-4dde-81ff-f178379a6204", "9c0263bf-eed1-43f6-93e2-1be7cbb90ca8", "6c671071-fdef-4e08-97c8-62c8793a86d1", "23e71df3-1581-4cfd-ac87-57da7c03794d", "51ab1978-b402-42fd-aa76-affb47efe054", "d7d46a6a-b71c-434c-8d42-ef00492b8bd6" ]
+  "images_id" : [ "df2fe09c-18aa-489b-a1c3-3ed4e68c5840", "0977ce52-5c47-4b76-894c-80be2a5aaf98", "17635dca-8b39-4024-97f8-ea449563d469", "c1b194e9-4615-48e8-b4f4-b13295c16c3c", "992adf09-83e0-4f68-98b6-5f5cae38a659", "c97ea7c8-beb9-4615-ad77-90ade720099d" ]
 }</code></pre>
 </div>
 </div>
@@ -890,11 +926,72 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "1a6a6369-e15e-448e-a5ca-3122cc93d9ed"
+  "id" : "37a83e20-1043-4114-8b6e-5bd10bbe005d"
 }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_수정"><a class="link" href="#_이야기_수정">이야기 수정</a></h3>
+<div class="sect3">
+<h4 id="_이야기_수정_http_request"><a class="link" href="#_이야기_수정_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /stories/4a340e6f-639d-49a4-bb73-9ee63a39b604 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: c643eb76-376b-43a6-9a91-af5ec2add65a
+Content-Length: 800
+Host: localhost:8080
+
+{
+  "start_date" : "2012-12-25",
+  "end_date" : "2012-12-25",
+  "title" : "기다리고 기다리던 하루",
+  "contents" : "종강하면 동해바다로 가족 여행 가자고 한게 엊그제 같았는데...3박 4일 동해여행 너무 재밌었어!! 날씨도 너무 좋았고 특히 갈치조림이 대박 ㄹㅇ 맛집 인정... 2일차 점심 때 대림공원 안에서 피크닉한게 가장 기억에 남았던거 같아! 엄마가 만들어 준 샌드위치는 세상에서 젤 맛있어 이거 팔면 대박날듯 ㅋㅋㅋ ",
+  "images_id" : [ "6d46740a-0f0e-4f98-afe8-3b3d174117ae", "5080b81a-2392-4f25-87b5-a041b8861ed9", "02aad5ad-6528-4458-a6bd-bf69e333a18f", "15e2992e-9b14-41ad-9243-3f334342d49e", "12a39e6b-40f5-4f66-ad84-d579bf0ab270", "1a3489bc-080d-4c2a-8b28-aa37f416c7ff" ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_수정_http_response"><a class="link" href="#_이야기_수정_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 51
+
+{
+  "id" : "e08174e3-45de-471d-96a9-33648c186f62"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_삭제"><a class="link" href="#_이야기_삭제">이야기 삭제</a></h3>
+<div class="sect3">
+<h4 id="_이야기_삭제_http_request"><a class="link" href="#_이야기_삭제_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /stories/b00346cb-15db-4260-b32a-7ad2950502dc HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: 0889b9af-564f-463d-9261-bd6dafdc57fa
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_삭제_http_response"><a class="link" href="#_이야기_삭제_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK</code></pre>
 </div>
 </div>
 </div>
@@ -908,7 +1005,7 @@ Content-Length: 53
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=createdAt&amp;lastViewed=2023-08-31 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: d142e23c-cced-4077-81e6-6c0dc5396155
+memberId: 6eefeb20-6e7f-4879-990f-918dd8377d18
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -919,31 +1016,21 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1941
+Content-Length: 1898
 
 {
   "stories" : [ {
-    "id" : "54c355e4-d446-4a83-aed2-e4ddee92ccbe",
-    "title" : "신나는 가족여행",
-    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "id" : "5a9b2b46-2d30-4c87-b796-38032f59a919",
+    "title" : "다같이 보드게임 했던 날",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
     "heart_cnt" : 2,
-    "comment_cnt" : 2,
-    "writer" : "고구마",
-    "start_date" : "2002-02-01",
-    "end_date" : "2002-02-02"
+    "comment_cnt" : 3,
+    "writer" : "허지롱이",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-12-03"
   }, {
-    "id" : "3910fcb0-fc75-4bfd-941f-73fa2764c2d7",
-    "title" : "맛있는 저녁식사",
-    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "image" : null,
-    "heart_cnt" : 0,
-    "comment_cnt" : 0,
-    "writer" : "구운계란",
-    "start_date" : "2005-02-01",
-    "end_date" : "2005-02-03"
-  }, {
-    "id" : "8e1314c1-c57d-4f5a-ac28-85a262c100ee",
+    "id" : "7a5202f1-14fd-4f51-949a-2c54562fb616",
     "title" : "못난이 생일잔치",
     "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -953,15 +1040,25 @@ Content-Length: 1941
     "start_date" : "2012-02-01",
     "end_date" : "2012-02-02"
   }, {
-    "id" : "fba2e649-b953-40d5-9780-eef3e4e598c4",
-    "title" : "다같이 보드게임 했던 날",
-    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "id" : "869bdcca-ec41-4c86-adea-a2e8efe55656",
+    "title" : "맛있는 저녁식사",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : null,
+    "heart_cnt" : 0,
+    "comment_cnt" : 0,
+    "writer" : "구운계란",
+    "start_date" : "2005-02-01",
+    "end_date" : "2005-02-03"
+  }, {
+    "id" : "5c86ae86-e8ac-48e7-909a-a8bdb3f06901",
+    "title" : "신나는 가족여행",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
     "heart_cnt" : 2,
-    "comment_cnt" : 3,
-    "writer" : "허지롱이",
-    "start_date" : "2022-02-01",
-    "end_date" : "2022-12-03"
+    "comment_cnt" : 2,
+    "writer" : "고구마",
+    "start_date" : "2002-02-01",
+    "end_date" : "2002-02-02"
   } ],
   "has_next" : true
 }</code></pre>
@@ -978,7 +1075,7 @@ Content-Length: 1941
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=startDate&amp;lastViewed=2022-03-31 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 9869a3c3-3a1d-4361-97d0-24cb037ff9fd
+memberId: 01a0b84e-a020-4aca-8683-95cc8f3f6d3a
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -989,31 +1086,21 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1941
+Content-Length: 1898
 
 {
   "stories" : [ {
-    "id" : "59c651de-bd29-4e00-a2a5-0c131f00d086",
-    "title" : "다같이 보드게임 했던 날",
-    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
-    "heart_cnt" : 2,
-    "comment_cnt" : 3,
-    "writer" : "허지롱이",
-    "start_date" : "2022-02-01",
-    "end_date" : "2022-12-03"
-  }, {
-    "id" : "ab51ad68-770c-4a3c-81f8-ff82444abb61",
-    "title" : "못난이 생일잔치",
+    "id" : "bde22878-eff0-4c75-9110-d7fa4451bd27",
+    "title" : "신나는 가족여행",
     "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
-    "heart_cnt" : 1,
-    "comment_cnt" : 0,
-    "writer" : "허망고",
-    "start_date" : "2012-02-01",
-    "end_date" : "2012-02-02"
+    "heart_cnt" : 2,
+    "comment_cnt" : 2,
+    "writer" : "고구마",
+    "start_date" : "2002-02-01",
+    "end_date" : "2002-02-02"
   }, {
-    "id" : "33495ce2-0c56-45b3-9026-946c2e04181e",
+    "id" : "d6a9f590-3fa1-4191-82c9-bee04bcc67fd",
     "title" : "맛있는 저녁식사",
     "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : null,
@@ -1023,15 +1110,25 @@ Content-Length: 1941
     "start_date" : "2005-02-01",
     "end_date" : "2005-02-03"
   }, {
-    "id" : "18166cb6-d40e-4fef-b3eb-2b0675f5b071",
-    "title" : "신나는 가족여행",
+    "id" : "d793ffb0-3f81-4045-b968-543ed20efa0f",
+    "title" : "못난이 생일잔치",
     "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 1,
+    "comment_cnt" : 0,
+    "writer" : "허망고",
+    "start_date" : "2012-02-01",
+    "end_date" : "2012-02-02"
+  }, {
+    "id" : "44fd75d3-10fc-4754-bea9-9f27e90c1a27",
+    "title" : "다같이 보드게임 했던 날",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
     "heart_cnt" : 2,
-    "comment_cnt" : 2,
-    "writer" : "고구마",
-    "start_date" : "2002-02-01",
-    "end_date" : "2002-02-02"
+    "comment_cnt" : 3,
+    "writer" : "허지롱이",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-12-03"
   } ],
   "has_next" : true
 }</code></pre>
@@ -1045,10 +1142,10 @@ Content-Length: 1941
 <h4 id="_이야기_상세_조회_http_request"><a class="link" href="#_이야기_상세_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/ddc6e15a-4d1d-421f-a523-fbb1eb11d830 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/0c64b38a-7d0d-4420-8902-7dca82bcc342 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 45678b13-5c29-41aa-9b21-f6b47b453fe2
+memberId: 67ae4629-150b-4bec-b389-ca6b059c8dfe
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1059,10 +1156,10 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1568
+Content-Length: 1534
 
 {
-  "id" : "3c682ed5-a452-46ce-8d7a-5baa0d229ae2",
+  "id" : "390a6576-9ba0-4cfd-ae71-115507745c79",
   "is_liked" : true,
   "images" : [ "image2.png", "image3.png", "image2.png", "image3.png", "image3.png" ],
   "title" : "~ 다같이 야구 보고온 날 ~",
@@ -1076,25 +1173,195 @@ Content-Length: 1568
     "time_before_writing" : "3시간 전"
   }, {
     "parent_comment_id" : "6da8a00c-b1df-4496-a8d7-6323294ba0ef",
-    "comment_id" : "1021b269-f530-41d4-99f0-e0035664c204",
+    "comment_id" : "fa7a24e5-6f40-4d3a-878a-f9f6fc54b1f4",
     "comment" : "첫번째 대댓글입니다.",
     "writer" : "김건빵",
     "time_before_writing" : "2시간 전"
   }, {
     "parent_comment_id" : "6da8a00c-b1df-4496-a8d7-6323294ba0ef",
-    "comment_id" : "a7dc3ab8-ad72-4d8c-97ee-23a9057a512b",
+    "comment_id" : "63c1a213-103a-4198-bb53-61fa11d043a5",
     "comment" : "두번째 대댓글입니다.",
     "writer" : "고구마",
     "time_before_writing" : "30분 전"
   }, {
     "parent_comment_id" : null,
-    "comment_id" : "3b04c0cb-3aa5-41d5-ac6a-14361c9f6108",
+    "comment_id" : "bb31af1c-6599-4128-b24a-3e83f3b3a708",
     "comment" : "야호 두번째 최상위댓글입니다.",
     "writer" : "아몬드",
     "time_before_writing" : "2시간 전"
   } ],
   "comment_cnt" : 4,
   "heart_cnt" : 5
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_검색"><a class="link" href="#_이야기_검색">이야기 검색</a></h3>
+<div class="sect3">
+<h4 id="_이야기_검색_http_request"><a class="link" href="#_이야기_검색_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/search?keyword=%EB%AA%BB%EB%82%9C%EC%9D%B4&amp;lastViewed=2023-08-31 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: 1fa4aa76-f507-4c5b-a022-5cfff7ab4d5c
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_검색_http_response"><a class="link" href="#_이야기_검색_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 1895
+
+{
+  "stories" : [ {
+    "id" : "3c3b8294-6f9f-477f-a42c-b7f77a79cb2c",
+    "title" : "룰루랄라",
+    "contents" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 2,
+    "comment_cnt" : 2,
+    "writer" : "고구마",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-02-02"
+  }, {
+    "id" : "150efc29-fcb0-427f-b825-41cc00fbc59d",
+    "title" : "못난이 외식 했지롱",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : null,
+    "heart_cnt" : 0,
+    "comment_cnt" : 0,
+    "writer" : "구운계란",
+    "start_date" : "2005-02-01",
+    "end_date" : "2019-02-03"
+  }, {
+    "id" : "b5ab9d23-46f5-4caf-bf48-f2baa336fd3b",
+    "title" : "생일잔치",
+    "contents" : "못난이 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 1,
+    "comment_cnt" : 0,
+    "writer" : "허망고",
+    "start_date" : "2011-02-01",
+    "end_date" : "2011-02-02"
+  }, {
+    "id" : "83dbfd94-de05-4037-bf12-2bdfcd71103d",
+    "title" : "쇼핑 데이 with 못난이",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 2,
+    "comment_cnt" : 3,
+    "writer" : "못난이",
+    "start_date" : "2010-02-01",
+    "end_date" : "2022-12-03"
+  } ],
+  "has_next" : false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_유저가_작성한_이야기_조회"><a class="link" href="#_유저가_작성한_이야기_조회">유저가 작성한 이야기 조회</a></h3>
+<div class="sect3">
+<h4 id="_유저가_작성한_이야기_조회_http_request"><a class="link" href="#_유저가_작성한_이야기_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/member?sort=startDate&amp;lastViewed=2023-08-31 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: c783acfa-91c1-4337-8ce7-598cb6351a91
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_유저가_작성한_이야기_조회_http_response"><a class="link" href="#_유저가_작성한_이야기_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 874
+
+{
+  "stories" : [ {
+    "id" : "e427cbc5-f41c-40a1-a278-c392db48b0ee",
+    "title" : "룰루랄라",
+    "contents" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 2,
+    "comment_cnt" : 2,
+    "writer" : "고구마",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-02-02"
+  }, {
+    "id" : "6c31fd21-7a48-44ff-a120-9c082df75049",
+    "title" : "못난이 외식 했지롱",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : null,
+    "heart_cnt" : 0,
+    "comment_cnt" : 0,
+    "writer" : "구운계란",
+    "start_date" : "2005-02-01",
+    "end_date" : "2019-02-03"
+  } ],
+  "has_next" : false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_유저가_좋아한_이야기_조회"><a class="link" href="#_유저가_좋아한_이야기_조회">유저가 좋아한 이야기 조회</a></h3>
+<div class="sect3">
+<h4 id="_유저가_좋아한_이야기_조회_http_request"><a class="link" href="#_유저가_좋아한_이야기_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/heart?sort=createdAt&amp;lastViewed=2023-08-31 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: 7860dcab-d1aa-4dc8-a78c-24416b9392d2
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_유저가_좋아한_이야기_조회_http_response"><a class="link" href="#_유저가_좋아한_이야기_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 884
+
+{
+  "stories" : [ {
+    "id" : "5fb24ea3-c2d9-4bf3-964f-5bd325d20e9a",
+    "title" : "선풍기 청소한 날",
+    "contents" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "heart_cnt" : 2,
+    "comment_cnt" : 2,
+    "writer" : "고구마",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-02-02"
+  }, {
+    "id" : "e3a58e72-55f2-42cd-b596-1bfe023feffa",
+    "title" : "못난이 외식 했지롱",
+    "contents" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "image" : null,
+    "heart_cnt" : 0,
+    "comment_cnt" : 0,
+    "writer" : "구운계란",
+    "start_date" : "2005-02-01",
+    "end_date" : "2019-02-03"
+  } ],
+  "has_next" : true
 }</code></pre>
 </div>
 </div>
@@ -1114,16 +1381,16 @@ Content-Length: 1568
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /schedule HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: cbf7f9bc-bd60-4b76-b532-bc16ff5bafa3
-Content-Length: 199
+memberId: 1776949d-42d8-4efc-b7d8-6e9413051e9d
+Content-Length: 191
 Host: localhost:8080
 
 {
   "title" : "가족 여행",
   "start_date" : "2023-07-31",
   "end_date" : "2023-08-02",
-  "schedule_type" : "가족",
-  "alarm_options" : [ "당일", "하루전" ],
+  "schedule_type" : "FAMILY",
+  "alarm_options" : [ "TODAY", "A_DAY_AGO" ],
   "dday_option" : true
 }</code></pre>
 </div>
@@ -1135,10 +1402,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "426fb593-8aca-488f-9898-6ce6caed98cf"
+  "id" : "32a0c3dd-57ef-44e2-98af-9e785b7c5d78"
 }</code></pre>
 </div>
 </div>
@@ -1150,11 +1417,11 @@ Content-Length: 53
 <h4 id="_일정_수정_http_request"><a class="link" href="#_일정_수정_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /schedule/update?scheduleId=db233d90-0d2a-4268-a08f-34221860c52d HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /schedule/update?scheduleId=d8dc5605-1d48-4e5c-a2e4-389345000134 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 6f85f761-64a5-4cb1-b6a6-87257cdb6479
-Content-Length: 146
+memberId: 72ff64a2-e0cc-4221-b24d-c1a17a348ad3
+Content-Length: 140
 Host: localhost:8080
 
 {
@@ -1173,11 +1440,34 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "7851ad0f-e636-4dab-86e9-0704ed1f5230"
+  "id" : "5070ab98-4d17-4318-b1e6-99003e5d0ae2"
 }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_일정_삭제"><a class="link" href="#_일정_삭제">일정 삭제</a></h3>
+<div class="sect3">
+<h4 id="_일정_삭제_http_request"><a class="link" href="#_일정_삭제_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /schedule?scheduleId=e9a43ee6-e848-4d3c-8bc4-6fa08672ef71 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: 78214ac9-b9b4-4ce9-a5fe-69187b0e3c94
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_일정_삭제_http_response"><a class="link" href="#_일정_삭제_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK</code></pre>
 </div>
 </div>
 </div>
@@ -1191,7 +1481,7 @@ Content-Length: 53
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /schedule/month?yearMonth=2023-07 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: a28d0421-c29e-4962-ad03-b3756bde3ea1
+memberId: 4fe2eec5-9feb-42b0-b7d6-ac03863d353b
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1202,37 +1492,37 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 974
+Content-Length: 952
 
 [ {
-  "id" : "70dfe243-8aca-4951-a7b0-01456a21b44a",
+  "id" : "46b6b0ee-4dcf-47aa-ac18-8904d3078453",
   "title" : "친구랑 여행",
   "start_date" : "2023-07-08",
   "end_date" : "2023-07-09",
-  "schedule_type" : "개인",
-  "member_id" : "73c7953e-df14-48e0-9ec9-d7f18d683afe",
+  "schedule_type" : "INDIVIDUAL",
+  "member_id" : "fe709e2c-5db6-4d3e-8491-286ba4bb19db",
   "color" : "BLUE",
-  "alarm_options" : [ "당일" ],
+  "alarm_options" : [ "TODAY" ],
   "dday_option" : true
 }, {
-  "id" : "aad7e2f2-094e-4eda-80af-f4f0e6e526c9",
+  "id" : "7933babb-7bf7-4a86-9886-fbccda3e21b0",
   "title" : "코딩 테스트",
   "start_date" : "2023-07-15",
   "end_date" : "2023-07-15",
-  "schedule_type" : "개인",
-  "member_id" : "8538b22b-a096-443e-b883-3f01bd1ef140",
+  "schedule_type" : "INDIVIDUAL",
+  "member_id" : "434001c8-f5c6-49da-8c0e-15fb58dc8949",
   "color" : "BLUE",
-  "alarm_options" : [ "당일" ],
+  "alarm_options" : [ "A_DAY_AGO" ],
   "dday_option" : true
 }, {
-  "id" : "aa3fb7fd-2bf7-46a8-943b-c378f7b7c419",
+  "id" : "fa020245-a248-4b3e-aa6b-6cce8ee4e692",
   "title" : "가족여행",
   "start_date" : "2023-07-31",
   "end_date" : "2023-08-02",
-  "schedule_type" : "가족",
-  "member_id" : "a1793d5d-e467-4658-8062-7854e4c84fd0",
+  "schedule_type" : "FAMILY",
+  "member_id" : "79ad61ca-0d06-4b3d-bc48-2a2d839071f1",
   "color" : "BLUE",
-  "alarm_options" : [ "하루전", "일주일전" ],
+  "alarm_options" : [ "A_DAY_AGO", "A_WEEK_AGO" ],
   "dday_option" : true
 } ]</code></pre>
 </div>
@@ -1252,7 +1542,7 @@ Content-Length: 974
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 59
+Content-Length: 56
 Host: localhost:8080
 
 {
@@ -1268,10 +1558,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 235
+Content-Length: 229
 
 {
-  "member_id" : "b1a71e9a-209e-421c-a1da-dbffa9b66f33",
+  "member_id" : "2ae9b267-7452-40f7-81fa-dae9be7157a5",
   "jwt_token" : {
     "access_token" : "accesasdfagfwaerg.tokenasfd13sad.isthisahtfgwiueoh",
     "refresh_token" : "refreshriuqwhfoieu.tokenqiweurhu.isthiswheoituhw"
@@ -1290,13 +1580,13 @@ Content-Length: 235
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/details HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: eafe38ca-2390-4206-a328-0fae5258230b
-Content-Length: 59
+memberId: c5912ebf-1be0-41f1-b5e0-3641673488bd
+Content-Length: 56
 Host: localhost:8080
 
 {
   "nickname" : "owori",
-  "birth_day" : "2023-07-14"
+  "birth_day" : "2023-07-16"
 }</code></pre>
 </div>
 </div>
@@ -1319,7 +1609,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/profile-image HTTP/1.1
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 8d10775b-3d9f-441c-ae12-efc4ad5bf574
+memberId: 9beda3fa-a89d-4ff3-93fa-43019b195055
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -1337,7 +1627,7 @@ Image
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 39
+Content-Length: 37
 
 {
   "url" : "http://someImageToUrl"
@@ -1355,13 +1645,13 @@ Content-Length: 39
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/profile HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 953dd7cf-271e-459e-80b8-4ea467cdcb08
-Content-Length: 84
+memberId: 99ba1895-26ba-42d7-a998-573782779474
+Content-Length: 80
 Host: localhost:8080
 
 {
   "nickname" : "오월이",
-  "birthday" : "2023-07-14",
+  "birthday" : "2023-07-16",
   "color" : "GREEN"
 }</code></pre>
 </div>
@@ -1385,7 +1675,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 8d4e823c-bbcb-40e2-97a5-3ef0e686684c
+memberId: 7d9ca980-d9db-4c51-9f1d-1c44e981afee
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1403,14 +1693,27 @@ Host: localhost:8080</code></pre>
 <h3 id="_멤버_감정_뱃지_업데이트"><a class="link" href="#_멤버_감정_뱃지_업데이트">멤버 감정 뱃지 업데이트</a></h3>
 <div class="sect3">
 <h4 id="_멤버_감정_뱃지_업데이트_http_request"><a class="link" href="#_멤버_감정_뱃지_업데이트_http_request">HTTP request</a></h4>
-<div class="paragraph">
-<p>Snippet http-request not found for operation::update member emotional badge</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/emotional-badge HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+memberId: 888f1910-d762-4a07-bafe-ea6d17811f7f
+Content-Length: 33
+Host: localhost:8080
+
+{
+  "emotional_badge" : "HAPPY"
+}</code></pre>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_멤버_감정_뱃지_업데이트_http_response"><a class="link" href="#_멤버_감정_뱃지_업데이트_http_response">HTTP response</a></h4>
-<div class="paragraph">
-<p>Snippet http-response not found for operation::update member emotional badge</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -1425,10 +1728,10 @@ Host: localhost:8080</code></pre>
 <h4 id="_좋아요_생성_취소_http_request"><a class="link" href="#_좋아요_생성_취소_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /hearts/803c5c82-fe6e-4432-a239-77cfa4bf44ef HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /hearts/6bada5e3-034f-4e9f-9151-6ec4646e1865 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 34cb98fd-be70-4312-bd3c-c400f63c6072
+memberId: da0d5f53-4c20-4898-9a45-afd60d7b73a9
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1439,7 +1742,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 25
+Content-Length: 23
 
 {
   "is_liked" : true
@@ -1462,14 +1765,14 @@ Content-Length: 25
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /comments HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 29ba95b2-78d1-4e0c-af9a-157b3bf4297d
-Content-Length: 265
+memberId: c44641ad-bc38-4316-8122-513e52b26985
+Content-Length: 261
 Host: localhost:8080
 
 {
   "parent_comment_id" : null,
   "content" : "여기엔 댓글 내용을 적어주시면 됩니다. 작성하는 댓글이 최상위 댓글인 경우에는 parentCommentId에 null을 담아주세요 &gt;_&lt;",
-  "story_id" : "1acfba2c-dc79-462c-9a9e-ba4b973e256f"
+  "story_id" : "dfbe3de9-5895-442b-9371-59b83123499f"
 }</code></pre>
 </div>
 </div>
@@ -1480,10 +1783,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "7ca8ab25-400a-440b-a648-254c36b10fef"
+  "id" : "ab6116b4-5477-4a84-82d9-8d62e4dfe7ec"
 }</code></pre>
 </div>
 </div>
@@ -1495,10 +1798,10 @@ Content-Length: 53
 <h4 id="_댓글_삭제_http_request"><a class="link" href="#_댓글_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /comments/4161a987-6c17-4830-94a2-73ff05218463 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /comments/ceb84efe-7108-4c8a-b7ee-77a8f4f0657c HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 9e3f45bf-fc05-4a1f-8094-86f85c7e527d
+memberId: 0d89d58b-d2a7-4190-b445-7e56cd957fee
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1518,11 +1821,11 @@ Host: localhost:8080</code></pre>
 <h4 id="_댓글_수정_http_request"><a class="link" href="#_댓글_수정_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /comments/b6924000-4e3b-4294-9aa3-4d97f9b58dbe HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /comments/b1c1d56e-d8f4-4e00-8f73-5b0cc0c0f1ee HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: b3546688-90e7-473b-9c1a-667e194f6fbb
-Content-Length: 45
+memberId: d9e940eb-f14e-4734-a783-401ca943b29a
+Content-Length: 43
 Host: localhost:8080
 
 {
@@ -1537,10 +1840,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "28df6c16-5427-4465-8592-f97be3ed3317"
+  "id" : "0fdad1e2-ec38-439c-8a62-d08ec2ef3dbb"
 }</code></pre>
 </div>
 </div>
@@ -1560,8 +1863,8 @@ Content-Length: 53
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /saying HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 33394fd2-965f-4f46-afc8-bbddab980db9
-Content-Length: 76
+memberId: 62530b5d-17f4-4a97-989a-ce1f562c99e5
+Content-Length: 73
 Host: localhost:8080
 
 {
@@ -1577,10 +1880,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "1c02fd19-5b1f-4cbb-aa8d-ac1efa2dcdc6"
+  "id" : "bf0632c2-2f3d-4e85-9819-c0a7725e06a5"
 }</code></pre>
 </div>
 </div>
@@ -1592,16 +1895,16 @@ Content-Length: 53
 <h4 id="_서로에게_한마디_수정_http_request"><a class="link" href="#_서로에게_한마디_수정_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /saying/update?sayingId=f171877e-7957-4982-81e9-2a816a553255 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /saying/update?sayingId=e5903ac9-738f-4065-8ddb-69fbeb388004 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 158fc2f9-355a-4a1d-9b87-06e7fd39965d
-Content-Length: 111
+memberId: cfbb3fea-1bd7-433e-85da-a8faa3547510
+Content-Length: 108
 Host: localhost:8080
 
 {
   "content" : "오늘 집 들어갈래",
-  "tag_members_id" : [ "0fe7b976-1034-41fd-8822-7c2a59a9635a" ]
+  "tag_members_id" : [ "b9b53ed8-d7d7-4a50-b29e-c27fb74c60f3" ]
 }</code></pre>
 </div>
 </div>
@@ -1612,10 +1915,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "f171877e-7957-4982-81e9-2a816a553255"
+  "id" : "e5903ac9-738f-4065-8ddb-69fbeb388004"
 }</code></pre>
 </div>
 </div>
@@ -1627,10 +1930,10 @@ Content-Length: 53
 <h4 id="_서로에게_한마디_삭제_http_request"><a class="link" href="#_서로에게_한마디_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /saying?sayingId=fb93dd0b-7f05-4d54-8335-4a3bd7c331bd HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /saying?sayingId=6558e7d3-22d5-4363-9f98-d2e6baa3cc15 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: 087332be-6918-4639-b4f2-a3f36a3af479
+memberId: c5bd6d6c-7506-44d1-9ba0-3d8f848d23f6
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1653,7 +1956,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /saying HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-memberId: b565c6f1-94ca-4083-af63-1fc45a28a351
+memberId: ea014117-80d4-47fa-b456-cd2539097723
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1664,20 +1967,20 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 506
+Content-Length: 493
 
 [ {
-  "id" : "c574760f-a846-4374-8936-534cc19da4bd",
+  "id" : "31b8ca47-86ba-49bb-bb16-15c0c3068639",
   "content" : "오늘 집 안들어가요",
-  "member_id" : "42ec2cdc-1ed2-4468-9fc6-907eb1764725",
+  "member_id" : "c4ceebc5-4341-46a8-a889-7557bbbed987",
   "tag_members_id" : [ ],
-  "updated_at" : "2023-07-14T02:42:08.387452"
+  "updated_at" : "2023-07-16T00:06:13.234347"
 }, {
-  "id" : "df379b37-c8bd-4a9a-b976-c602094c43d5",
+  "id" : "81b0e093-9687-4842-ba9b-f1417c43e74c",
   "content" : "밥 먹고 들어갈게요",
-  "member_id" : "b9af75e0-72c0-4b2d-a96b-6c4fd6582080",
-  "tag_members_id" : [ "a0271361-dd65-4041-b1e0-ebeda2aabd96" ],
-  "updated_at" : "2023-07-14T02:42:08.3886859"
+  "member_id" : "d2252456-9e30-462d-b925-334e22f27e17",
+  "tag_members_id" : [ "86b52cab-2e03-4f31-abf1-bb106d9367a8" ],
+  "updated_at" : "2023-07-16T00:06:13.234381"
 } ]</code></pre>
 </div>
 </div>
@@ -1688,7 +1991,7 @@ Content-Length: 506
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-13 22:41:48 +0900
+Last updated 2023-07-12 16:21:29 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
