@@ -495,6 +495,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_이미지_업로드_이야기_http_request">HTTP request</a></li>
 <li><a href="#_이미지_업로드_이야기_http_response">HTTP response</a></li>
+<li><a href="#_이미지_업로드_이야기_request_parts">Request parts</a></li>
+<li><a href="#_이미지_업로드_이야기_response_fields">Response fields</a></li>
 </ul>
 </li>
 </ul>
@@ -505,18 +507,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_이야기_등록_http_request">HTTP request</a></li>
 <li><a href="#_이야기_등록_http_response">HTTP response</a></li>
+<li><a href="#_이야기_등록_request_fields">Request fields</a></li>
+<li><a href="#_이야기_등록_response_fields">Response fields</a></li>
 </ul>
 </li>
 <li><a href="#_이야기_수정">이야기 수정</a>
 <ul class="sectlevel3">
 <li><a href="#_이야기_수정_http_request">HTTP request</a></li>
 <li><a href="#_이야기_수정_http_response">HTTP response</a></li>
+<li><a href="#_이야기_수정_request_fields">Request fields</a></li>
 </ul>
 </li>
 <li><a href="#_이야기_삭제">이야기 삭제</a>
 <ul class="sectlevel3">
 <li><a href="#_이야기_삭제_http_request">HTTP request</a></li>
 <li><a href="#_이야기_삭제_http_response">HTTP response</a></li>
+<li><a href="#_이야기_삭제_path_parameters">Path parameters</a></li>
+</ul>
+</li>
+<li><a href="#_이야기_전체_조회_날짜순">이야기 전체 조회 (날짜순)</a>
+<ul class="sectlevel3">
+<li><a href="#_이야기_전체_조회_날짜순_http_request">HTTP request</a></li>
+<li><a href="#_이야기_전체_조회_날짜순_http_response">HTTP response</a></li>
+<li><a href="#_이야기_전체_조회_날짜순_request_parameters">Request parameters</a></li>
+<li><a href="#_이야기_전체_조회_날짜순_response_fields">Response fields</a></li>
 </ul>
 </li>
 <li><a href="#_이야기_전체_조회_최신순">이야기 전체 조회 (최신순)</a>
@@ -525,22 +539,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_이야기_전체_조회_최신순_http_response">HTTP response</a></li>
 </ul>
 </li>
-<li><a href="#_이야기_전체_조회_날짜순">이야기 전체 조회 (날짜순)</a>
-<ul class="sectlevel3">
-<li><a href="#_이야기_전체_조회_날짜순_http_request">HTTP request</a></li>
-<li><a href="#_이야기_전체_조회_날짜순_http_response">HTTP response</a></li>
-</ul>
-</li>
 <li><a href="#_이야기_상세_조회">이야기 상세 조회</a>
 <ul class="sectlevel3">
 <li><a href="#_이야기_상세_조회_http_request">HTTP request</a></li>
 <li><a href="#_이야기_상세_조회_http_response">HTTP response</a></li>
+<li><a href="#_이야기_상세_조회_path_parameters">Path parameters</a></li>
+<li><a href="#_이야기_상세_조회_response_fields">Response fields</a></li>
 </ul>
 </li>
 <li><a href="#_이야기_검색">이야기 검색</a>
 <ul class="sectlevel3">
 <li><a href="#_이야기_검색_http_request">HTTP request</a></li>
 <li><a href="#_이야기_검색_http_response">HTTP response</a></li>
+<li><a href="#_이야기_검색_request_parameters">Request parameters</a></li>
 </ul>
 </li>
 <li><a href="#_유저가_작성한_이야기_조회">유저가 작성한 이야기 조회</a>
@@ -593,10 +604,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_member">Member</a>
 <ul class="sectlevel2">
-<li><a href="#_멤버_생성_및_jwt_토큰_생성">멤버 생성 및 Jwt 토큰 생성</a>
+<li><a href="#_카카오_멤버_생성_및_jwt_토큰_생성">카카오 멤버 생성 및 Jwt 토큰 생성</a>
 <ul class="sectlevel3">
-<li><a href="#_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></li>
-<li><a href="#_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></li>
+<li><a href="#_카카오_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></li>
+<li><a href="#_카카오_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_애플_멤버_생성_및_jwt_토큰_생성">애플 멤버 생성 및 Jwt 토큰 생성</a>
+<ul class="sectlevel3">
+<li><a href="#_애플_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></li>
+<li><a href="#_애플_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_구글_멤버_생성_및_jwt_토큰_생성">구글 멤버 생성 및 Jwt 토큰 생성</a>
+<ul class="sectlevel3">
+<li><a href="#_구글_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></li>
+<li><a href="#_구글_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></li>
 </ul>
 </li>
 <li><a href="#_멤버_초기_정보_업데이트">멤버 초기 정보 업데이트</a>
@@ -655,6 +678,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_좋아요_생성_취소_http_request">HTTP request</a></li>
 <li><a href="#_좋아요_생성_취소_http_response">HTTP response</a></li>
+<li><a href="#_좋아요_생성_취소_request_fields">Request fields</a></li>
+<li><a href="#_좋아요_생성_취소_response_fields">Response fields</a></li>
 </ul>
 </li>
 </ul>
@@ -665,18 +690,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_댓글_작성_http_request">HTTP request</a></li>
 <li><a href="#_댓글_작성_http_response">HTTP response</a></li>
+<li><a href="#_댓글_작성_request_fields">Request fields</a></li>
+<li><a href="#_댓글_작성_response_fields">Response fields</a></li>
 </ul>
 </li>
 <li><a href="#_댓글_삭제">댓글 삭제</a>
 <ul class="sectlevel3">
 <li><a href="#_댓글_삭제_http_request">HTTP request</a></li>
 <li><a href="#_댓글_삭제_http_response">HTTP response</a></li>
+<li><a href="#_댓글_삭제_path_parameters">Path parameters</a></li>
 </ul>
 </li>
 <li><a href="#_댓글_수정">댓글 수정</a>
 <ul class="sectlevel3">
 <li><a href="#_댓글_수정_http_request">HTTP request</a></li>
 <li><a href="#_댓글_수정_http_response">HTTP response</a></li>
+<li><a href="#_댓글_수정_request_fields">Request fields</a></li>
 </ul>
 </li>
 </ul>
@@ -715,12 +744,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_최신_검색어_조회_http_request">HTTP request</a></li>
 <li><a href="#_최신_검색어_조회_http_response">HTTP response</a></li>
+<li><a href="#_최신_검색어_조회_response_fields">Response fields</a></li>
 </ul>
 </li>
 <li><a href="#_최신_검색어_단일_삭제">최신 검색어 단일 삭제</a>
 <ul class="sectlevel3">
 <li><a href="#_최신_검색어_단일_삭제_http_request">HTTP request</a></li>
 <li><a href="#_최신_검색어_단일_삭제_http_response">HTTP response</a></li>
+<li><a href="#_최신_검색어_단일_삭제_path_parameters">Path parameters</a></li>
 </ul>
 </li>
 <li><a href="#_최신_검색어_전체_삭제">최신 검색어 전체 삭제</a>
@@ -758,7 +789,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 141
+Content-Length: 138
 
 {
   "access_token" : "asdfiuer3oidwf12.asdfoihoihn23vs.grwoi6ghrweiog5h",
@@ -782,8 +813,8 @@ Content-Length: 141
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: a2996497-8d40-45da-8d1c-5df6d01964f4
-Content-Length: 44
+member_id: 3e83d3cd-061c-4d84-b7c3-78e09601285b
+Content-Length: 42
 Host: localhost:8080
 
 {
@@ -798,7 +829,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 37
+Content-Length: 35
 
 {
   "invite_code" : "oworiinvite"
@@ -816,8 +847,8 @@ Content-Length: 37
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 3cb5420d-193a-4bc7-9f23-91b421e87f26
-Content-Length: 50
+member_id: 4ceab0bc-6a89-4256-bf78-85550798dd98
+Content-Length: 48
 Host: localhost:8080
 
 {
@@ -844,8 +875,8 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/group-name HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 2f3a237f-d79e-4fdb-a2dd-f03b96da6655
-Content-Length: 44
+member_id: 0cab2204-4dbd-4c0e-92ef-bb29b9364f9a
+Content-Length: 42
 Host: localhost:8080
 
 {
@@ -872,7 +903,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /families/images HTTP/1.1
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 0a0de5fa-bd4a-4bba-81a8-9a1e81b40cdd
+member_id: d33c6969-9eb6-46e2-89fc-71442cef84cc
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -890,7 +921,7 @@ Image
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 45
+Content-Length: 43
 
 {
   "family_image" : "http://someUrlToS3"
@@ -908,7 +939,7 @@ Content-Length: 45
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /families/code HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 62db4cb2-e1a9-4d4c-b813-45cc0a116391
+member_id: 2227c5bf-f47c-43c0-a48a-07e8a5c7864e
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -919,7 +950,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 36
+Content-Length: 34
 
 {
   "invite_code" : "qeroiuh12y"
@@ -943,7 +974,7 @@ Content-Length: 36
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Accept: application/json
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 3b6caf6a-5287-41c7-b63c-78c456e890ef
+member_id: db6ae4f5-e972-45d2-ae28-1e68f705af10
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -966,13 +997,58 @@ Image 2
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 77
+Content-Length: 75
 
 {
   "story_images" : [ "http://storyImage1Url", "http://storyImage2Url" ]
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_이미지_업로드_이야기_request_parts"><a class="link" href="#_이미지_업로드_이야기_request_parts">Request parts</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Part</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">업로드 할 이미지 파일</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_이미지_업로드_이야기_response_fields"><a class="link" href="#_이미지_업로드_이야기_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지에 접근 가능한 url</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -989,8 +1065,8 @@ Content-Length: 77
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /stories HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: f01b57a2-e7f0-40f9-abcc-88cdf19c6220
-Content-Length: 668
+member_id: ae7ba7e3-109c-480b-b154-a05ec53af98d
+Content-Length: 662
 Host: localhost:8080
 
 {
@@ -1009,13 +1085,81 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 59
+Content-Length: 57
 
 {
-  "story_id" : "dbac7666-ae9d-4e09-8449-216bdbe58468"
+  "story_id" : "37484171-96e1-404c-8937-9ab9e07a0945"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_등록_request_fields"><a class="link" href="#_이야기_등록_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">활동 시작 일자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">활동 종료 일자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story 제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지 리스트 (null 가능 / 최대 10장)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_이야기_등록_response_fields"><a class="link" href="#_이야기_등록_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성된 story의 id</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1027,12 +1171,12 @@ Content-Length: 59
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /stories/update HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: aec9bf24-d4b4-4408-87c6-f928f7fa5c0f
-Content-Length: 724
+member_id: cd298a2e-11ad-4ebd-9cd3-cd73eb823bd4
+Content-Length: 717
 Host: localhost:8080
 
 {
-  "story_id" : "845570c2-921a-40be-a6d5-74af343b24db",
+  "story_id" : "58b68fb9-e4fb-40d9-8967-23164a3bb049",
   "start_date" : "2012-12-25",
   "end_date" : "2012-12-25",
   "title" : "기다리고 기다리던 하루",
@@ -1048,13 +1192,62 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 59
+Content-Length: 57
 
 {
-  "story_id" : "2feb10c6-0e3c-4b47-bc7e-90260cceb7a6"
+  "story_id" : "15e22b46-0522-4e25-b2ea-244f9b34d315"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_수정_request_fields"><a class="link" href="#_이야기_수정_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 story의 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 활동 시작 일자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 활동 종료 일자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 story 제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 story 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 이미지 리스트 (null 가능 / 최대 10장)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1063,10 +1256,10 @@ Content-Length: 59
 <h4 id="_이야기_삭제_http_request"><a class="link" href="#_이야기_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /stories/7bf042e2-11d2-4294-a41c-04d561923790 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /stories/37b864c8-7dea-4f1f-902e-5d4e15fa162e HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 74499f31-0934-42c2-b5dc-455f17154012
+member_id: 2eee7550-62a1-49b8-8089-7442e56280c5
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1079,79 +1272,27 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_이야기_전체_조회_최신순"><a class="link" href="#_이야기_전체_조회_최신순">이야기 전체 조회 (최신순)</a></h3>
 <div class="sect3">
-<h4 id="_이야기_전체_조회_최신순_http_request"><a class="link" href="#_이야기_전체_조회_최신순_http_request">HTTP request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=created_at&amp;last_viewed=2023-08-31 HTTP/1.1
-Content-Type: application/json;charset=UTF-8
-Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 35029f60-8901-4c90-b96b-7100f15dc536
-Host: localhost:8080</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_이야기_전체_조회_최신순_http_response"><a class="link" href="#_이야기_전체_조회_최신순_http_response">HTTP response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8
-Content-Length: 2132
-
-{
-  "stories" : [ {
-    "story_id" : "474b45b8-2c97-4bf5-9b19-d0fbf8153d89",
-    "title" : "다같이 보드게임 했던 날",
-    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
-    "is_multiple_images" : false,
-    "heart_count" : 2,
-    "comment_count" : 3,
-    "writer" : "허지롱이",
-    "start_date" : "2022-02-01",
-    "end_date" : "2022-12-03"
-  }, {
-    "story_id" : "bfbf0da9-c7cb-4927-9a11-53c0b96ca770",
-    "title" : "못난이 생일잔치",
-    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
-    "is_multiple_images" : false,
-    "heart_count" : 1,
-    "comment_count" : 0,
-    "writer" : "허망고",
-    "start_date" : "2012-02-01",
-    "end_date" : "2012-02-02"
-  }, {
-    "story_id" : "16590dbf-f05d-457b-ae88-57452bd93287",
-    "title" : "맛있는 저녁식사",
-    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : null,
-    "is_multiple_images" : false,
-    "heart_count" : 0,
-    "comment_count" : 0,
-    "writer" : "구운계란",
-    "start_date" : "2005-02-01",
-    "end_date" : "2005-02-03"
-  }, {
-    "story_id" : "7585c916-fb19-4ddf-b981-f5bb126e7e44",
-    "title" : "신나는 가족여행",
-    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
-    "is_multiple_images" : true,
-    "heart_count" : 2,
-    "comment_count" : 2,
-    "writer" : "고구마",
-    "start_date" : "2002-02-01",
-    "end_date" : "2002-02-02"
-  } ],
-  "has_next" : true
-}</code></pre>
-</div>
-</div>
+<h4 id="_이야기_삭제_path_parameters"><a class="link" href="#_이야기_삭제_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /stories/{storyId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>storyId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 story id</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1160,10 +1301,10 @@ Content-Length: 2132
 <h4 id="_이야기_전체_조회_날짜순_http_request"><a class="link" href="#_이야기_전체_조회_날짜순_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=start_date&amp;last_viewed=2022-03-31 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=start_date&amp;page=1&amp;size=4 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: f224cf19-bcd0-463a-b85b-1687c7b8fc72
+member_id: 4c275bbd-386b-4dcb-acab-d42e9c1ddf28
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1174,11 +1315,11 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 2132
+Content-Length: 2104
 
 {
   "stories" : [ {
-    "story_id" : "04384eca-c385-4eba-b97c-2eb7ae0b6195",
+    "story_id" : "25be9fd1-b54b-449d-8789-663edc5ef590",
     "title" : "신나는 가족여행",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1189,10 +1330,10 @@ Content-Length: 2132
     "start_date" : "2002-02-01",
     "end_date" : "2002-02-02"
   }, {
-    "story_id" : "da94c12c-b692-437e-a431-da86b2aca68f",
+    "story_id" : "b57e8bab-85ed-46a2-9c0b-60f9dce14710",
     "title" : "맛있는 저녁식사",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : null,
+    "thumbnail" : "null",
     "is_multiple_images" : false,
     "heart_count" : 0,
     "comment_count" : 0,
@@ -1200,7 +1341,7 @@ Content-Length: 2132
     "start_date" : "2005-02-01",
     "end_date" : "2005-02-03"
   }, {
-    "story_id" : "eae92442-f323-48d9-b970-194a9d0fa802",
+    "story_id" : "35eef273-3053-41c4-9525-177c11dc73eb",
     "title" : "못난이 생일잔치",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1211,7 +1352,7 @@ Content-Length: 2132
     "start_date" : "2012-02-01",
     "end_date" : "2012-02-02"
   }, {
-    "story_id" : "a89709fa-1d24-480e-821f-931a399bd28e",
+    "story_id" : "63a807b8-b3ff-4e0c-b9a9-014903f3fc3a",
     "title" : "다같이 보드게임 했던 날",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1222,7 +1363,196 @@ Content-Length: 2132
     "start_date" : "2022-02-01",
     "end_date" : "2022-12-03"
   } ],
-  "has_next" : true
+  "next_page" : 2,
+  "last_page" : 4
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_전체_조회_날짜순_request_parameters"><a class="link" href="#_이야기_전체_조회_날짜순_request_parameters">Request parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">정렬 기준 (날짜순 start_date / 최신순 created_at)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">현재 페이지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">불러올 게시글 개수</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_이야기_전체_조회_날짜순_response_fields"><a class="link" href="#_이야기_전체_조회_날짜순_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회한 story 리스트</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story의 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].thumbnail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">대표 이미지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].is_multiple_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">여러 이미지 인가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].heart_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">좋아요 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].comment_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].writer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].start_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">활동 시작 일자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories[].end_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">활동 종료 일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>next_page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">다음 페이지 번호 / (-1인 경우 마지막 페이지)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>last_page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">마지막 페이지 번호 / (-1인 경우 마지막 페이지)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이야기_전체_조회_최신순"><a class="link" href="#_이야기_전체_조회_최신순">이야기 전체 조회 (최신순)</a></h3>
+<div class="sect3">
+<h4 id="_이야기_전체_조회_최신순_http_request"><a class="link" href="#_이야기_전체_조회_최신순_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories?sort=created_at&amp;page=1&amp;size=4 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
+member_id: d135096a-e28f-4ff2-9803-eec2d3a84c2c
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_전체_조회_최신순_http_response"><a class="link" href="#_이야기_전체_조회_최신순_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 2102
+
+{
+  "stories" : [ {
+    "story_id" : "40456263-74a5-402c-9e27-af0093711e32",
+    "title" : "다같이 보드게임 했던 날",
+    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "is_multiple_images" : false,
+    "heart_count" : 2,
+    "comment_count" : 3,
+    "writer" : "허지롱이",
+    "start_date" : "2022-02-01",
+    "end_date" : "2022-12-03"
+  }, {
+    "story_id" : "04f1d80a-3bc5-4203-890a-44f03d2d2f45",
+    "title" : "못난이 생일잔치",
+    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "is_multiple_images" : false,
+    "heart_count" : 1,
+    "comment_count" : 0,
+    "writer" : "허망고",
+    "start_date" : "2012-02-01",
+    "end_date" : "2012-02-02"
+  }, {
+    "story_id" : "dbe88c24-2d33-4bde-b0cf-0d62eb93ccc5",
+    "title" : "맛있는 저녁식사",
+    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "thumbnail" : null,
+    "is_multiple_images" : false,
+    "heart_count" : 0,
+    "comment_count" : 0,
+    "writer" : "구운계란",
+    "start_date" : "2005-02-01",
+    "end_date" : "2005-02-03"
+  }, {
+    "story_id" : "6fc58ce7-73a4-4cec-886a-3f4579925447",
+    "title" : "신나는 가족여행",
+    "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
+    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
+    "is_multiple_images" : true,
+    "heart_count" : 2,
+    "comment_count" : 2,
+    "writer" : "고구마",
+    "start_date" : "2002-02-01",
+    "end_date" : "2002-02-02"
+  } ],
+  "next_page" : 2,
+  "last_page" : 4
 }</code></pre>
 </div>
 </div>
@@ -1234,10 +1564,10 @@ Content-Length: 2132
 <h4 id="_이야기_상세_조회_http_request"><a class="link" href="#_이야기_상세_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/b33a600c-3013-49e2-91f7-1b45b009e8d1 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/8ec0d6cc-69d0-46c8-a5af-e9f845260290 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: e27b15e9-c1ce-4e61-b531-9cd499557f14
+member_id: debf9449-387c-42ed-ad4f-11c9fecd91a3
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1248,10 +1578,10 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1824
+Content-Length: 1783
 
 {
-  "story_id" : "8af70119-b405-4c80-a21b-70457b981589",
+  "story_id" : "ee7b6d0e-9ad4-4d24-b4b7-58268ddaa7ed",
   "is_liked" : true,
   "story_images" : [ "image2.png", "image3.png", "image2.png", "image3.png", "image3.png" ],
   "title" : "~ 다같이 야구 보고온 날 ~",
@@ -1268,32 +1598,163 @@ Content-Length: 1824
     "delete_comment_check" : false
   }, {
     "parent_comment_id" : "6da8a00c-b1df-4496-a8d7-6323294ba0ef",
-    "comment_id" : "5a7f445c-829b-449a-877c-9ed2f4211bde",
+    "comment_id" : "b21df995-2a4d-4668-8626-85c6c75b2570",
     "comment" : "첫번째 대댓글입니다.",
     "writer" : "김건빵",
     "time_before_writing" : "2시간 전",
     "delete_comment_check" : false
   }, {
     "parent_comment_id" : "6da8a00c-b1df-4496-a8d7-6323294ba0ef",
-    "comment_id" : "d07834e4-4148-4bfd-9fef-69292f37a007",
+    "comment_id" : "6ee9ec3f-72ed-4ca0-9765-b51389a5fc02",
     "comment" : "두번째 대댓글입니다.",
     "writer" : "고구마",
     "time_before_writing" : "30분 전",
     "delete_comment_check" : false
   }, {
     "parent_comment_id" : null,
-    "comment_id" : "2c406e0b-dacc-4bac-aace-00c8085505da",
+    "comment_id" : "c121bc5b-648b-4c80-aa45-19ec1791c63f",
     "comment" : "야호 두번째 최상위댓글입니다.",
     "writer" : "아몬드",
     "time_before_writing" : "2시간 전",
     "delete_comment_check" : false
   } ],
-  "start_date" : "2023-08-11",
-  "end_date" : "2023-08-11",
+  "start_date" : "2023-10-06",
+  "end_date" : "2023-10-06",
   "thumbnail" : "image2.png"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_상세_조회_path_parameters"><a class="link" href="#_이야기_상세_조회_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /stories/{storyId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>storyId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회할 story id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_이야기_상세_조회_response_fields"><a class="link" href="#_이야기_상세_조회_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>is_liked</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">로그인 한 유저가 좋아요를 눌렀는지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_images</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지 리스트 (null 가능 / 최대 10장)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>heart_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">좋아요 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 리스트</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].parent_comment_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글의 부모 댓글 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].comment_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글의 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].comment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].writer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 작성자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].time_before_writing</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 작성 후 지난 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comments[].delete_comment_check</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글이 삭제되었는지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story의 활동 시작 날짜</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">story 활동 종료 날짜</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>thumbnail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">대표 이미지</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1302,10 +1763,10 @@ Content-Length: 1824
 <h4 id="_이야기_검색_http_request"><a class="link" href="#_이야기_검색_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/search?keyword=%EB%AA%BB%EB%82%9C%EC%9D%B4&amp;last_viewed=2023-08-31 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/search?keyword=%EB%AA%BB%EB%82%9C%EC%9D%B4&amp;page=10&amp;size=4 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: e30ae467-ce2f-4c66-b2e4-6c10122b2344
+member_id: 10e3fe78-5831-418b-a727-6e36c5e88d0b
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1316,11 +1777,11 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 2129
+Content-Length: 2100
 
 {
   "stories" : [ {
-    "story_id" : "2f82ddc7-bf25-4680-9b16-dc1806b87253",
+    "story_id" : "71905e47-de70-4fbb-9c10-01e597191705",
     "title" : "룰루랄라",
     "content" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1331,7 +1792,7 @@ Content-Length: 2129
     "start_date" : "2022-02-01",
     "end_date" : "2022-02-02"
   }, {
-    "story_id" : "b15e4c37-eb84-435d-b5ca-8162b60f2b1f",
+    "story_id" : "a95dd1d8-5506-4379-8bea-a4ff98f3366d",
     "title" : "못난이 외식 했지롱",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : null,
@@ -1342,7 +1803,7 @@ Content-Length: 2129
     "start_date" : "2005-02-01",
     "end_date" : "2019-02-03"
   }, {
-    "story_id" : "febeee10-cfc1-4f64-a0e0-43054ffe7d67",
+    "story_id" : "fe01b7ca-4104-4c2d-b8b4-4d477285cc1b",
     "title" : "생일잔치",
     "content" : "못난이 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1353,7 +1814,7 @@ Content-Length: 2129
     "start_date" : "2011-02-01",
     "end_date" : "2011-02-02"
   }, {
-    "story_id" : "ed81fede-45da-45d8-ae22-7dc3b73cd5f6",
+    "story_id" : "d529b7b7-1de3-4dc8-b354-3057f3059091",
     "title" : "쇼핑 데이 with 못난이",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용 이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1364,10 +1825,40 @@ Content-Length: 2129
     "start_date" : "2010-02-01",
     "end_date" : "2022-12-03"
   } ],
-  "has_next" : false
+  "next_page" : 10,
+  "last_page" : -1
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_이야기_검색_request_parameters"><a class="link" href="#_이야기_검색_request_parameters">Request parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keyword</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">검색어</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">현재 페이지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회한 페이지 개수</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1376,10 +1867,10 @@ Content-Length: 2129
 <h4 id="_유저가_작성한_이야기_조회_http_request"><a class="link" href="#_유저가_작성한_이야기_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/member?sort=start_date&amp;last_viewed=2023-08-31 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/member?sort=start_date&amp;page=11&amp;size=2 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 10822206-b922-440a-8708-9adf719e70bb
+member_id: 699701c0-4139-4c9f-b48f-d79874ac8631
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1390,11 +1881,11 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 993
+Content-Length: 1087
 
 {
   "stories" : [ {
-    "story_id" : "4c967a22-668f-4b48-ba0d-9c04647e0cbf",
+    "story_id" : "8d7e84b6-f0a5-40b8-9c68-925c472e4e9a",
     "title" : "룰루랄라",
     "content" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1405,10 +1896,10 @@ Content-Length: 993
     "start_date" : "2022-02-01",
     "end_date" : "2022-02-02"
   }, {
-    "story_id" : "1f7f8c3d-b1f1-4cc7-b4e5-bf1abb39c990",
+    "story_id" : "03d3624e-7f97-4584-bf50-df718ec084d0",
     "title" : "못난이 외식 했지롱",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
-    "thumbnail" : null,
+    "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
     "is_multiple_images" : false,
     "heart_count" : 0,
     "comment_count" : 0,
@@ -1416,7 +1907,8 @@ Content-Length: 993
     "start_date" : "2005-02-01",
     "end_date" : "2019-02-03"
   } ],
-  "has_next" : false
+  "next_page" : 12,
+  "last_page" : 21
 }</code></pre>
 </div>
 </div>
@@ -1428,10 +1920,10 @@ Content-Length: 993
 <h4 id="_유저가_좋아한_이야기_조회_http_request"><a class="link" href="#_유저가_좋아한_이야기_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/heart?sort=created_at&amp;last_viewed=2023-08-31 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /stories/heart?sort=created_at&amp;page=1&amp;size=2 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: eb986dbc-2e3c-447e-94c2-2114da743bd4
+member_id: f6b10724-ce93-41d8-ba6c-f0ea824fabd1
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1442,11 +1934,11 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1003
+Content-Length: 996
 
 {
   "stories" : [ {
-    "story_id" : "897ad665-c338-4bb4-9378-12d90431ffe8",
+    "story_id" : "dd41b0f6-0f96-417c-a557-0d87016bbbfb",
     "title" : "선풍기 청소한 날",
     "content" : "이야기 내용입니다 못난이 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : "https://owori.s3.ap-northeast-2.amazonaws.com/story/Group%2010_f985a58a-1257-4691-88ee-e2b75977fb3e.png",
@@ -1457,7 +1949,7 @@ Content-Length: 1003
     "start_date" : "2022-02-01",
     "end_date" : "2022-02-02"
   }, {
-    "story_id" : "0495dcfd-7cf1-4990-bae7-64474401063d",
+    "story_id" : "2c4272ee-924f-4ee6-814b-abbc4f79bfc9",
     "title" : "못난이 외식 했지롱",
     "content" : "이야기 내용입니다 내용 내용 내용 내용 내용 내용 내용 내용 내용",
     "thumbnail" : null,
@@ -1468,7 +1960,8 @@ Content-Length: 1003
     "start_date" : "2005-02-01",
     "end_date" : "2019-02-03"
   } ],
-  "has_next" : true
+  "next_page" : 2,
+  "last_page" : 12
 }</code></pre>
 </div>
 </div>
@@ -1488,12 +1981,13 @@ Content-Length: 1003
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /schedule HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 671d540f-8cc6-4843-a63c-6b1a84396760
-Content-Length: 198
+member_id: 78588496-6e21-4c64-8d6e-bd557f5d3f6a
+Content-Length: 222
 Host: localhost:8080
 
 {
   "title" : "가족 여행",
+  "content" : "재밌겠다.",
   "start_date" : "2024-07-31",
   "end_date" : "2024-08-02",
   "schedule_type" : "FAMILY",
@@ -1509,10 +2003,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 62
+Content-Length: 60
 
 {
-  "schedule_id" : "572d9e53-b030-4424-892a-f1725efb5b10"
+  "schedule_id" : "c6cd3579-624c-4015-9631-9e438590b173"
 }</code></pre>
 </div>
 </div>
@@ -1527,13 +2021,14 @@ Content-Length: 62
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /schedule/update HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 6bf8c9d9-f376-4ba9-948f-5683333dba1e
-Content-Length: 205
+member_id: a0d6840e-6678-48e3-9106-fb7c58f79988
+Content-Length: 229
 Host: localhost:8080
 
 {
-  "schedule_id" : "384a20b8-36fa-47f4-a224-5b0939b52463",
+  "schedule_id" : "945d336a-5501-40f5-9b87-fe2e2b68c1ff",
   "title" : "가족 여행",
+  "content" : "재밌겠다.",
   "start_date" : "2024-07-31",
   "end_date" : "2024-08-04",
   "dday_option" : true,
@@ -1548,10 +2043,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 62
+Content-Length: 60
 
 {
-  "schedule_id" : "04cef678-8cdb-4a64-9f1f-1bed24bf7ba3"
+  "schedule_id" : "7667f479-5052-475c-b8a7-658b68f0f71c"
 }</code></pre>
 </div>
 </div>
@@ -1563,10 +2058,10 @@ Content-Length: 62
 <h4 id="_일정_삭제_http_request"><a class="link" href="#_일정_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /schedule/33bbfa0b-d443-480e-bce3-d9c5dbcdb168 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /schedule/34e358fc-3834-42dd-897b-74bf97c730da HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 6943f12e-a41e-4638-af4c-05540b047645
+member_id: 4b12c9ed-4990-41e3-a417-53327c2d8294
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1589,7 +2084,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /schedule/month?year_month=2023-07 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 2b42680a-8cbc-4ca5-9a5a-28663682f21d
+member_id: e8189573-28c8-4f80-b5e1-bd8f65f72ba1
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1600,11 +2095,12 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 919
+Content-Length: 982
 
 [ {
-  "schedule_id" : "195b7487-eef8-4c80-8039-eb8c059ef8da",
+  "schedule_id" : "34a52e4c-f528-48ca-8e49-559d1bd289ee",
   "title" : "친구랑 여행",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-08",
   "end_date" : "2023-07-09",
   "schedule_type" : "INDIVIDUAL",
@@ -1613,8 +2109,9 @@ Content-Length: 919
   "dday_option" : true,
   "alarm_options" : [ "TODAY" ]
 }, {
-  "schedule_id" : "105e2cb1-a81a-448b-bba3-edcf565c4d88",
+  "schedule_id" : "f5022d24-f95c-4c33-970b-b4facbcf97fc",
   "title" : "코딩 테스트",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-15",
   "end_date" : "2023-07-15",
   "schedule_type" : "INDIVIDUAL",
@@ -1623,8 +2120,9 @@ Content-Length: 919
   "dday_option" : true,
   "alarm_options" : [ "A_DAY_AGO" ]
 }, {
-  "schedule_id" : "862311b8-20bc-4d4b-b93d-90e4ae713050",
+  "schedule_id" : "00afca8f-0d6d-4667-8597-408e3007ce6c",
   "title" : "가족여행",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-31",
   "end_date" : "2023-08-02",
   "schedule_type" : "FAMILY",
@@ -1646,7 +2144,7 @@ Content-Length: 919
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /schedule/dday HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 8689b0f2-5b36-427c-8238-a27d7078e47c
+member_id: 5eaccd51-8615-4a94-a491-11dd8b008ca0
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1657,11 +2155,12 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 979
+Content-Length: 1099
 
 [ {
-  "schedule_id" : "c4762239-4c90-4169-ab41-582a98d166b9",
+  "schedule_id" : "e5ae222e-d1da-4f26-a22c-22b099d009e5",
   "title" : "친구랑 여행",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-16",
   "end_date" : "2023-07-09",
   "dday" : "D-DAY",
@@ -1669,10 +2168,12 @@ Content-Length: 979
   "nickname" : "벡스",
   "color" : "BLUE",
   "dday_option" : true,
-  "alarm_options" : [ "TODAY" ]
+  "alarm_options" : [ "TODAY" ],
+  "is_mine" : true
 }, {
-  "schedule_id" : "002a0c0c-0fc6-45fc-9690-27dbcab84aad",
+  "schedule_id" : "1d935e92-7f39-42ff-89cb-2d5e552da9f8",
   "title" : "코딩 테스트",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-17",
   "end_date" : "2023-07-15",
   "dday" : "D-1",
@@ -1680,10 +2181,12 @@ Content-Length: 979
   "nickname" : "오월이",
   "color" : "BLUE",
   "dday_option" : true,
-  "alarm_options" : [ "A_DAY_AGO" ]
+  "alarm_options" : [ "A_DAY_AGO" ],
+  "is_mine" : true
 }, {
-  "schedule_id" : "6119e35c-8cd4-4339-b6b4-749296388e2d",
+  "schedule_id" : "b4a7d907-e2cb-4463-995b-0c3bb36bc376",
   "title" : "가족여행",
+  "content" : "재밌겠다.",
   "start_date" : "2023-07-31",
   "end_date" : "2023-08-02",
   "dday" : "D-15",
@@ -1691,7 +2194,8 @@ Content-Length: 979
   "nickname" : "벡스",
   "color" : "BLUE",
   "dday_option" : true,
-  "alarm_options" : [ "A_DAY_AGO", "A_WEEK_AGO" ]
+  "alarm_options" : [ "A_DAY_AGO", "A_WEEK_AGO" ],
+  "is_mine" : true
 } ]</code></pre>
 </div>
 </div>
@@ -1703,14 +2207,14 @@ Content-Length: 979
 <h2 id="_member"><a class="link" href="#_member">Member</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_멤버_생성_및_jwt_토큰_생성"><a class="link" href="#_멤버_생성_및_jwt_토큰_생성">멤버 생성 및 Jwt 토큰 생성</a></h3>
+<h3 id="_카카오_멤버_생성_및_jwt_토큰_생성"><a class="link" href="#_카카오_멤버_생성_및_jwt_토큰_생성">카카오 멤버 생성 및 Jwt 토큰 생성</a></h3>
 <div class="sect3">
-<h4 id="_멤버_생성_및_jwt_토큰_생성_http_request"><a class="link" href="#_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></h4>
+<h4 id="_카카오_멤버_생성_및_jwt_토큰_생성_http_request"><a class="link" href="#_카카오_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/kakao HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 59
+Content-Length: 56
 Host: localhost:8080
 
 {
@@ -1721,15 +2225,92 @@ Host: localhost:8080
 </div>
 </div>
 <div class="sect3">
-<h4 id="_멤버_생성_및_jwt_토큰_생성_http_response"><a class="link" href="#_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></h4>
+<h4 id="_카카오_멤버_생성_및_jwt_토큰_생성_http_response"><a class="link" href="#_카카오_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 266
+Content-Length: 259
 
 {
-  "member_id" : "1a1792b9-a5b2-4c37-8a91-a6af21d89490",
+  "member_id" : "7aefaa8b-81b9-4ff5-a662-555218f1e2ed",
+  "is_service_member" : true,
+  "jwt_token" : {
+    "access_token" : "accesasdfagfwaerg.tokenasfd13sad.isthisahtfgwiueoh",
+    "refresh_token" : "refreshriuqwhfoieu.tokenqiweurhu.isthiswheoituhw"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_애플_멤버_생성_및_jwt_토큰_생성"><a class="link" href="#_애플_멤버_생성_및_jwt_토큰_생성">애플 멤버 생성 및 Jwt 토큰 생성</a></h3>
+<div class="sect3">
+<h4 id="_애플_멤버_생성_및_jwt_토큰_생성_http_request"><a class="link" href="#_애플_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/apple HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 89
+Host: localhost:8080
+
+{
+  "token" : "382y5e3a5",
+  "authorization_code" : "code",
+  "auth_provider" : "APPLE"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_애플_멤버_생성_및_jwt_토큰_생성_http_response"><a class="link" href="#_애플_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+Content-Length: 259
+
+{
+  "member_id" : "49f48446-964d-4e9f-9a5c-4cbe40f4ce01",
+  "is_service_member" : true,
+  "jwt_token" : {
+    "access_token" : "accesasdfagfwaerg.tokenasfd13sad.isthisahtfgwiueoh",
+    "refresh_token" : "refreshriuqwhfoieu.tokenqiweurhu.isthiswheoituhw"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_구글_멤버_생성_및_jwt_토큰_생성"><a class="link" href="#_구글_멤버_생성_및_jwt_토큰_생성">구글 멤버 생성 및 Jwt 토큰 생성</a></h3>
+<div class="sect3">
+<h4 id="_구글_멤버_생성_및_jwt_토큰_생성_http_request"><a class="link" href="#_구글_멤버_생성_및_jwt_토큰_생성_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/google HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 57
+Host: localhost:8080
+
+{
+  "token" : "382y5e3a5",
+  "auth_provider" : "GOOGLE"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_구글_멤버_생성_및_jwt_토큰_생성_http_response"><a class="link" href="#_구글_멤버_생성_및_jwt_토큰_생성_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+Content-Length: 259
+
+{
+  "member_id" : "7e537dfa-12fe-4100-b440-9de0e38a8d21",
   "is_service_member" : true,
   "jwt_token" : {
     "access_token" : "accesasdfagfwaerg.tokenasfd13sad.isthisahtfgwiueoh",
@@ -1749,13 +2330,13 @@ Content-Length: 266
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/details HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 02d9c512-8c05-404c-b62e-229613580367
-Content-Length: 58
+member_id: 36bf3abd-d0a0-4d04-8fa2-d8195be4b226
+Content-Length: 55
 Host: localhost:8080
 
 {
   "nickname" : "owori",
-  "birthday" : "2023-08-11"
+  "birthday" : "2023-10-06"
 }</code></pre>
 </div>
 </div>
@@ -1766,7 +2347,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 34
+Content-Length: 32
 
 {
   "is_service_member" : true
@@ -1784,7 +2365,7 @@ Content-Length: 34
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/profile-image HTTP/1.1
 Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 00ac1b86-4b3e-465d-a0a7-1246d8e54eda
+member_id: 679a1be0-60d2-4e90-abe8-71ddda8fd8d3
 Host: localhost:8080
 
 --6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
@@ -1802,7 +2383,7 @@ Image
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 49
+Content-Length: 47
 
 {
   "profile_image" : "http://someImageToUrl"
@@ -1820,13 +2401,13 @@ Content-Length: 49
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/profile HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 5747725c-c406-4303-aba6-1937c814afa4
-Content-Length: 84
+member_id: b25f9724-d032-409b-bfd0-6663f45e5953
+Content-Length: 80
 Host: localhost:8080
 
 {
   "nickname" : "오월이",
-  "birthday" : "2023-08-11",
+  "birthday" : "2023-10-06",
   "color" : "GREEN"
 }</code></pre>
 </div>
@@ -1850,7 +2431,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: b4803971-5e17-4c24-982c-d42556d6fb6d
+member_id: 09c4f439-a333-4871-8f8f-b778d4312cd3
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1873,8 +2454,8 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/emotional-badge HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: fb14088b-ca21-46fa-b327-7181a2498f65
-Content-Length: 35
+member_id: 1e0f06ef-c4f3-439a-a64a-092de7af7bd0
+Content-Length: 33
 Host: localhost:8080
 
 {
@@ -1901,7 +2482,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/home HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 28acb0bf-4177-45ee-9a9b-234496815a42
+member_id: d0649e9f-efcd-4858-91fb-aa9db3bb6d28
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1912,29 +2493,30 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 2249
+Content-Length: 2346
 
 {
   "family_group_name" : "오월이 가족",
   "member_profiles" : [ {
-    "id" : "04c49b41-a38c-4dd5-9460-d1df6e6b303c",
+    "id" : "7b851c22-b318-4029-acfc-3879d8b7b419",
     "nickname" : "아빠",
     "profile_image" : "http://someProfileImageUrl",
     "emotional_badge" : "SO_HAPPY"
   }, {
-    "id" : "df8d5a96-5504-4b48-b613-8ff1e0fcd4ae",
+    "id" : "926b5403-891e-43e3-8092-ae37fb0456f3",
     "nickname" : "엄마",
     "profile_image" : "http://someProfileImageUrl",
     "emotional_badge" : "JOY"
   }, {
-    "id" : "4fd026b2-5fd7-400d-a1d4-bbf7022fb6dc",
+    "id" : "af713250-56a0-473b-8620-76cfdb56a585",
     "nickname" : "아들",
     "profile_image" : "http://someProfileImageUrl",
     "emotional_badge" : "CRY"
   } ],
   "dday_schedules" : [ {
-    "schedule_id" : "1e07fe4e-a6af-4005-9d1d-6ae0bd4c7714",
+    "schedule_id" : "b6f7b17d-61f1-46ac-a718-2093bfbbacb9",
     "title" : "가족 여행",
+    "content" : "재밌겠다.",
     "start_date" : "2023-07-20",
     "end_date" : "2023-07-23",
     "dday" : "D-3",
@@ -1942,10 +2524,12 @@ Content-Length: 2249
     "nickname" : "벡스",
     "color" : "BLUE",
     "dday_option" : true,
-    "alarm_options" : [ ]
+    "alarm_options" : [ ],
+    "is_mine" : true
   }, {
-    "schedule_id" : "1369321c-aab8-4b3f-aa86-f1185768b6be",
+    "schedule_id" : "fc62cf89-88e6-4900-a259-f8f6d1a43a35",
     "title" : "휴가",
+    "content" : "재밌겠다.",
     "start_date" : "2023-07-24",
     "end_date" : "2023-07-28",
     "dday" : "D-3",
@@ -1953,10 +2537,12 @@ Content-Length: 2249
     "nickname" : "오월이",
     "color" : "SKYBLUE",
     "dday_option" : true,
-    "alarm_options" : [ ]
+    "alarm_options" : [ ],
+    "is_mine" : true
   }, {
-    "schedule_id" : "e2201844-8cec-4440-a14e-c85bd928dd08",
+    "schedule_id" : "902fea97-44d7-4d9f-8caa-b877bd85d630",
     "title" : "친구 여행",
+    "content" : "재밌겠다.",
     "start_date" : "2023-07-30",
     "end_date" : "2023-08-03",
     "dday" : "D-3",
@@ -1964,21 +2550,22 @@ Content-Length: 2249
     "nickname" : "벡스",
     "color" : "GREEN",
     "dday_option" : true,
-    "alarm_options" : [ ]
+    "alarm_options" : [ ],
+    "is_mine" : true
   } ],
   "family_images" : [ "111111", "222222" ],
   "family_sayings" : [ {
-    "saying_id" : "ce3f637b-54e0-4fd5-b57c-b3773f2a6aa0",
+    "saying_id" : "e1db7407-0791-4c08-87ab-fdfa7ff8f1aa",
     "content" : "오늘 회식해요",
-    "member_id" : "04c49b41-a38c-4dd5-9460-d1df6e6b303c",
-    "tag_members_id" : [ "1e34e1e4-bd4b-4e89-aa79-85d5a31dd079", "52f97de4-cd53-4404-af48-eab187aea6ef" ],
-    "updated_at" : "2023-08-11T23:14:21.1956747"
+    "member_id" : "7b851c22-b318-4029-acfc-3879d8b7b419",
+    "tag_members_id" : [ "540b62a9-6b5c-48aa-ac5b-633752368d24", "1a7d9a26-b9b6-49ad-88ac-2d35971bfcfa" ],
+    "updated_at" : "2023-10-06T13:21:47.123016"
   }, {
-    "saying_id" : "3f34f45c-13f6-41f7-aef9-d71d966fefbb",
+    "saying_id" : "7fcb37a2-5726-4d64-812d-026d4b72b217",
     "content" : "오늘 저녁 카레",
-    "member_id" : "df8d5a96-5504-4b48-b613-8ff1e0fcd4ae",
+    "member_id" : "926b5403-891e-43e3-8092-ae37fb0456f3",
     "tag_members_id" : [ ],
-    "updated_at" : "2023-08-11T23:14:21.1956747"
+    "updated_at" : "2023-10-06T13:21:47.123051"
   } ]
 }</code></pre>
 </div>
@@ -1994,7 +2581,7 @@ Content-Length: 2249
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/profile HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 7d96e1ef-a88f-42ef-8f12-c4b609816ec8
+member_id: 5c31c746-8821-4f8c-b45b-be5056f9f72d
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2005,7 +2592,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 210
+Content-Length: 202
 
 {
   "nickname" : "꼼지락",
@@ -2032,7 +2619,7 @@ Content-Length: 210
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/colors HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: a8ee9495-56bc-48d5-b906-55788e752e3b
+member_id: beee7afa-62db-4ad5-8722-ffd65d1e682d
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2043,7 +2630,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 142
+Content-Length: 134
 
 {
   "red" : false,
@@ -2072,12 +2659,12 @@ Content-Length: 142
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /hearts HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 2add016c-059a-435c-b718-79b8099348d2
-Content-Length: 59
+member_id: ccc7d021-4de7-43ef-8e22-55510b50f67c
+Content-Length: 57
 Host: localhost:8080
 
 {
-  "story_id" : "87f5212a-2e43-40c7-8e17-1ffc44140783"
+  "story_id" : "f7008a39-25f5-4ab6-b822-66daf7e934e6"
 }</code></pre>
 </div>
 </div>
@@ -2088,13 +2675,61 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 25
+Content-Length: 23
 
 {
   "is_liked" : true
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_좋아요_생성_취소_request_fields"><a class="link" href="#_좋아요_생성_취소_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">좋아요 누를 story의 id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_좋아요_생성_취소_response_fields"><a class="link" href="#_좋아요_생성_취소_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>is_liked</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">좋아요 여부</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -2111,12 +2746,12 @@ Content-Length: 25
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /comments HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: cc06bd44-23ed-4b15-80b4-369b84772b74
-Content-Length: 265
+member_id: acc1b5fc-9605-431d-824f-66b6d4af6577
+Content-Length: 261
 Host: localhost:8080
 
 {
-  "story_id" : "17493c6c-4bb8-42bc-a387-1e68defe03e7",
+  "story_id" : "8d9177d9-4ca9-40e5-9f8e-58bdad4d9f8f",
   "parent_comment_id" : null,
   "content" : "여기엔 댓글 내용을 적어주시면 됩니다. 작성하는 댓글이 최상위 댓글인 경우에는 parentCommentId에 null을 담아주세요 &gt;_&lt;"
 }</code></pre>
@@ -2129,13 +2764,71 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 61
+Content-Length: 59
 
 {
-  "comment_id" : "76a69baa-a7c8-40cd-afea-4d9d92f7297b"
+  "comment_id" : "944b2218-6473-499d-b221-583316dce4b9"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_댓글_작성_request_fields"><a class="link" href="#_댓글_작성_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>story_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 작성할 story의 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parent_comment_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">부모 댓글의 id (null도 가능)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_댓글_작성_response_fields"><a class="link" href="#_댓글_작성_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글의 id</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -2144,10 +2837,10 @@ Content-Length: 61
 <h4 id="_댓글_삭제_http_request"><a class="link" href="#_댓글_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /comments/1171c466-ceee-477c-9fed-5cab1ab50ceb HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /comments/7a19a1b1-9aae-4f85-a781-041eac66852b HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 93e93d10-ba98-4579-a19a-04fc61dc77e9
+member_id: d9d39324-bdcb-4c11-aa6b-4f6b551d287d
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2160,6 +2853,28 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_댓글_삭제_path_parameters"><a class="link" href="#_댓글_삭제_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /comments/{commentId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>commentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 댓글의 id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_댓글_수정"><a class="link" href="#_댓글_수정">댓글 수정</a></h3>
@@ -2170,12 +2885,12 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /comments/update HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 6cd86b83-43f8-4471-a961-87dda05e0470
-Content-Length: 103
+member_id: 00056e10-2cd6-4229-ae19-fdb0e1ab3f30
+Content-Length: 100
 Host: localhost:8080
 
 {
-  "comment_id" : "834d3d9d-4cbe-4b12-bed9-96242f4a02b6",
+  "comment_id" : "c690a9a2-9a8d-4100-a47d-0aab0c4631d1",
   "comment" : "수정할 댓글 내용"
 }</code></pre>
 </div>
@@ -2187,13 +2902,42 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 61
+Content-Length: 59
 
 {
-  "comment_id" : "377255d1-8781-49fe-b5fa-54f2b666f0e0"
+  "comment_id" : "c690a9a2-9a8d-4100-a47d-0aab0c4631d1"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_댓글_수정_request_fields"><a class="link" href="#_댓글_수정_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 댓글의 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 댓글 내용</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -2210,8 +2954,8 @@ Content-Length: 61
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /saying HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: bec93498-2eb6-49a4-aba1-8c183a03e7d5
-Content-Length: 76
+member_id: b7c0bb87-3729-4115-9149-43932cbbc99b
+Content-Length: 73
 Host: localhost:8080
 
 {
@@ -2227,10 +2971,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 60
+Content-Length: 58
 
 {
-  "saying_id" : "bc577fd1-ef5d-4c3f-8f6e-933c9723a7d1"
+  "saying_id" : "e9eb481c-89ce-4794-9e0e-4cdba2e5cf8f"
 }</code></pre>
 </div>
 </div>
@@ -2245,14 +2989,14 @@ Content-Length: 60
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /saying/update HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 44db6aa9-4285-4777-ad1b-b169fb23dfe1
-Content-Length: 168
+member_id: 3d36796e-71bb-49a7-bca3-8546a62397ba
+Content-Length: 164
 Host: localhost:8080
 
 {
-  "saying_id" : "94b275c3-4460-49d2-9cf2-f2cf1a90bb90",
+  "saying_id" : "a619f0a1-1228-44a8-8f54-c6ecb4b97cdb",
   "content" : "오늘 집 들어갈래",
-  "tag_members_id" : [ "d1b681b5-a438-48d3-b4df-53846ef52198" ]
+  "tag_members_id" : [ "6f7245eb-23d7-411e-a731-938e27975fb5" ]
 }</code></pre>
 </div>
 </div>
@@ -2263,10 +3007,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 60
+Content-Length: 58
 
 {
-  "saying_id" : "f9eecfd4-b7c2-45bb-a881-fb81e4d615a3"
+  "saying_id" : "4ab02859-5048-43e9-bc90-bd3cc5774b61"
 }</code></pre>
 </div>
 </div>
@@ -2278,10 +3022,10 @@ Content-Length: 60
 <h4 id="_서로에게_한마디_삭제_http_request"><a class="link" href="#_서로에게_한마디_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /saying/154e58fc-eb12-4c54-91c0-d0df4002d256 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /saying/84379e74-1282-44f3-b342-408d9c6dd421 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: ac6fa24c-43a8-4fa5-92d4-5db3e87e240a
+member_id: 71e6e6c8-e9d7-4293-afe6-39fc31c68b77
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2304,7 +3048,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /saying HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: e3ecb55f-5c43-4e91-96e3-a7db19c483c7
+member_id: f0646cfa-bc51-4ecd-8450-0048abaf40d3
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2315,20 +3059,20 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 521
+Content-Length: 507
 
 [ {
-  "saying_id" : "51a7590e-8e58-4ebe-9560-09113ce1e3d9",
+  "saying_id" : "d9ea5a60-3c03-46b0-8caa-ec4f747e7a47",
   "content" : "오늘 집 안들어가요",
-  "member_id" : "7a9dbdb3-4d04-4814-aaad-6fa861bfc4e8",
+  "member_id" : "77918691-4c4e-4b2f-90bc-a47c0c78e1e3",
   "tag_members_id" : [ ],
-  "updated_at" : "2023-08-11T23:14:22.0016914"
+  "updated_at" : "2023-10-06T13:21:47.478886"
 }, {
-  "saying_id" : "1a056033-9d5d-468c-8499-705f11612c94",
+  "saying_id" : "2cd1436b-11f5-48d9-a95e-7fea7b92d8a5",
   "content" : "밥 먹고 들어갈게요",
-  "member_id" : "7b7e4fa9-64a4-47a0-81ee-47299b3d5b65",
-  "tag_members_id" : [ "50744513-e19d-4e56-b4e0-08394bb4b914" ],
-  "updated_at" : "2023-08-11T23:14:22.0016914"
+  "member_id" : "580b86a3-6461-41f9-b6e8-9ee59b109292",
+  "tag_members_id" : [ "f42619c7-70db-4b97-aaae-80d03d5c6b56" ],
+  "updated_at" : "2023-10-06T13:21:47.478916"
 } ]</code></pre>
 </div>
 </div>
@@ -2348,7 +3092,7 @@ Content-Length: 521
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /keywords HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 84604857-c4bc-4224-aa4b-5a327a45615d
+member_id: cc5e0a60-9c61-4050-afef-b2092e77b547
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2359,20 +3103,49 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 279
+Content-Length: 270
 
 [ {
-  "keyword_id" : "5d693cca-9b4d-4f46-84de-0813767852b3",
+  "keyword_id" : "2cef68ab-61da-4e2c-9f49-7f00b03f2d81",
   "content" : "강화도"
 }, {
-  "keyword_id" : "ab315bbb-9d57-4580-aa73-ef82b0d11917",
+  "keyword_id" : "d6080edf-445c-46e9-8e3a-15f02585cd04",
   "content" : "간장 게장"
 }, {
-  "keyword_id" : "a6e05128-b8cf-49d6-8a2e-7e44e9dbfb55",
+  "keyword_id" : "cd20a987-d70c-40fb-8537-deb2a404f0c8",
   "content" : "야구장"
 } ]</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_최신_검색어_조회_response_fields"><a class="link" href="#_최신_검색어_조회_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[].keyword_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">검색어 id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[].content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">검색어</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -2381,10 +3154,10 @@ Content-Length: 279
 <h4 id="_최신_검색어_단일_삭제_http_request"><a class="link" href="#_최신_검색어_단일_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /keywords/f1a8c9a6-7106-4377-b9e4-279a76a46695 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /keywords/38c99ba6-887e-4040-a7fa-d55df38d196a HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 10a826fa-449c-4c07-ba80-faff8ed509b9
+member_id: daa6d4f2-d3d7-4a18-8d1f-cbf0b7e21b7c
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2397,6 +3170,28 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_최신_검색어_단일_삭제_path_parameters"><a class="link" href="#_최신_검색어_단일_삭제_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /keywords/{keywordId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keywordId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 키워드의 id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_최신_검색어_전체_삭제"><a class="link" href="#_최신_검색어_전체_삭제">최신 검색어 전체 삭제</a></h3>
@@ -2407,7 +3202,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /keywords HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer ghuriewhv32j12.oiuwhftg32shdi.ogiurhw0gb
-member_id: 08dba73e-a89b-46d3-966a-60bf1fb6df46
+member_id: 3c6d5664-6826-4949-b75f-61217504c324
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -2426,7 +3221,7 @@ Host: localhost:8080</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-20 17:39:43 +0900
+Last updated 2023-07-20 00:33:09 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
